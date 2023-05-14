@@ -97,10 +97,13 @@ export const LoginStyle = styled.div`
     transition: all linear 160ms;
     cursor: pointer;
     margin: 0 !important;
+    border: 3px solid red;
   }
 
   .acesso:hover {
     transform: scale(1.05);
     background-color: #544541;
+    color: #fff;
+    border: 3px solid #fff; /* Adiciona uma borda no hover */
   }
 `;

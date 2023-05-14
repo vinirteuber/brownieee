@@ -8,6 +8,7 @@ import Cadastro from "./Pages/Cadastro";
 import Carrinho from "./Pages/Carrinho";
 import Login from "./Pages/Login";
 import Sobrenos from "./Pages/Sobrenos";
+import Minhaconta from "./Pages/Minhaconta";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <BrowserRouter>
@@ -18,6 +19,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <Route path="/carrinho" element={<Carrinho />} />
       <Route path="/sobrenos" element={<Sobrenos />} />
       <Route path="/login" element={<Login />} />
+      <Route path="/minhaconta" element={<Minhaconta />} />
     </Routes>
   </BrowserRouter>
 );

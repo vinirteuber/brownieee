@@ -4,6 +4,8 @@ import Carrinho from "../assets/carrinho-de-compras-removebg-preview.png";
 import { Link } from "react-router-dom";
 
 function Navbar() {
+  const isLoggedIn = localStorage.getItem("token"); // Verifica se o usuário está logado
+
   return (
     <header>
       <div className="navbar">
@@ -24,22 +26,22 @@ function Navbar() {
                 <li>home</li>
               </Link>
               <li>
-                <Link to="/produtos">
-                  <li>Produtos</li>
-                </Link>
+                <Link to="/produtos">Produtos</Link>
               </li>
-
               <Link to="/sobrenos">
-                <li> Quem nós somos?</li>
+                <li>Quem nós somos?</li>
               </Link>
             </ul>
           </div>
           <div className="car-conta">
             <div className="conta">
-              <Link to="/login">
-                {" "}
+              <Link to={isLoggedIn ? "/minhaconta" : "/login"}>
                 <img src={RemoveBG} alt="" />
-                <span>Minha Conta</span>
+                <span>
+                  {isLoggedIn
+                    ? localStorage.getItem("username") || "Minha Conta"
+                    : "Minha Conta"}
+                </span>
               </Link>
             </div>
             <div className="car">
